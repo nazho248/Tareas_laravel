@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyectos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--favicon-->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!--Tailwind-->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!--Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="max-w-screen min-h-screen bg-gray-100 overflow-x-hidden">
+
+<!--navbar-->
+<div class="flex flex-wrap ">
+    <section class="relative mx-auto">
+        <nav class="flex justify-between bg-gray-900 text-white w-screen">
+            <div class="px-5 xl:px-12 py-6 flex w-full items-center">
+                <a class="text-3xl font-bold font-heading" href="#">
+                    <img class="h-9" src="assets/images/Logo%20Universidad.png" alt="logo">
+                </a>
+                <!-- Nav Links -->
+                <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
+                    <li><a class="hover:text-gray-200 " href="dashboard.html">Inicio</a></li>
+                    <li><a class="hover:text-gray-200p-2 px-4 rounded-full bg-blue-800" href="#">Proyectos</a></li>
+                    <li><a class="hover:text-gray-200" href="#">Estudiantes</a></li>
+                    <li><a class="hover:text-gray-200" href="#">Configuración</a></li>
+                </ul>
+                <!-- Header Icons -->
+                <div class="hidden xl:flex items-center space-x-5 items-center">
+
+                    <a class="flex items-center hover:text-gray-200" href="#">
+                        <i class='bx bx-bell text-2xl'></i>
+                        <span class="flex absolute -mt-5 ml-4">
+              <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
+                </span>
+              </span>
+                    </a>
+                    <!-- Sign In / Register      -->
+                    <a class="flex items-center hover:text-gray-200" href="#">
+                        <img class="h-9 w-9 rounded-full object-cover" src="assets/images/user.webp"
+                             alt="user">
+                    </a>
+                </div>
+            </div>
+            <!-- Responsive navbar -->
+            <a class="xl:hidden flex mr-6 items-center" href="#">
+                <i class='bx bx-bell text-2xl'></i>
+                <!--indicador de notificacion-->
+                <span class="flex absolute -mt-5 ml-4">
+          <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
+          </span>
+        </span>
+            </a>
+            <a class="navbar-burger self-center mr-12 xl:hidden" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-200" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </a>
+        </nav>
+
+    </section>
+</div>
+<!--Breadcrumb-->
+<nav class="flex bg-gray-50 text-gray-700   py-3 px-5  dark:bg-gray-800 rounded-br-xl rounded-bl-xl ">
+
+    <div class="flex w-full">
+        <div class="text-start w-1/2">
+            <h1 class="text-sm md:text-xl font-semibold text-gray-400  my-3">Todos los Proyectos</h1>
+        </div>
+
+        <ol class="inline-flex items-center space-x-1 md:space-x-3 text-end w-1/2 justify-end">
+            <li class="inline-flex">
+                <a href="#"
+                   class="text-sm text-gray-700 hover:text-gray-900 inline-flex items-center dark:text-gray-400 dark:hover:text-white">
+                    <i class='bx bxs-home text-sm'></i>
+                     Proyectos
+                </a>
+            </li>
+
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <i class='bx bx-chevron-right text-2xl text-gray-500'></i>
+                    <span class="text-gray-400 ml-1 md:ml-2 text-sm font-medium dark:text-gray-500">Panel de Control</span>
+                </div>
+            </li>
+        </ol>
+    </div>
+</nav>
+
+<!--contenido-->
+<div class="container mx-auto flex grid md:grid-cols-12 gap-4 mt-6  grid-cols-1 ">
+    <a href="proyecto_prueba.html" class="col-span-4 bg-white rounded-2xl shadow-xl shadow-slate-300/60 mt-6 mx-2 hover:scale-105 transition duration-300 ease-in-out">
+        <!-- img -->
+        <img class="aspect-video w-full rounded-t-2xl object-cover object-center"
+             src="https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+        <!-- text information -->
+        <div class="p-4">
+            <small class="text-blue-400 text-xs">Clase Lorem</small>
+            <br>
+            <div class="flex inline-flex w-full justify-between">
+                <h1 class="text-2xl font-medium text-slate-600 pb-2">Proyecto Lorem</h1>
+
+                <div class="flex flex-row-reverse md:mt-2 lg:mt-0 ">
+                    <span class="z-0 ml-px inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-slate-200 text-xs text-navy-700 ">+2</span><span
+                        class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white">
+                                <img class="h-full w-full rounded-full object-cover"
+                                     src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/avatar1.eeef2af6dfcd3ff23cb8.png"
+                                     alt="">
+                            </span>
+                    <span class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white">
+                                <img class="h-full w-full rounded-full object-cover"
+                                     src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/avatar2.5692c39db4f8c0ea999e.png"
+                                     alt="">
+                            </span>
+                    <span class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white">
+                                <img class="h-full w-full rounded-full object-cover"
+                                     src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/avatar3.9f646ac5920fa40adf00.png"
+                                     alt="">
+                            </span>
+                </div>
+
+            </div>
+            <p class="text-sm tracking-tight font-light text-slate-400 leading-6">Dodge is an American brand of
+                automobiles
+                and a division of Stellantis, based in Auburn Hills, Michigan..</p>
+        </div>
+    </a>
+    <a href="proyecto_prueba.html" class="col-span-4 bg-white rounded-2xl shadow-xl shadow-slate-300/60 mt-6 mx-2 hover:scale-105 transition duration-300 ease-in-out">
+        <!-- img -->
+        <img class="aspect-video w-full rounded-t-2xl object-cover object-center"
+             src="https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+        <!-- text information -->
+        <div class="p-4">
+            <small class="text-blue-400 text-xs">Clase Lorem</small>
+            <br>
+            <div class="flex inline-flex w-full justify-between">
+                <h1 class="text-2xl font-medium text-slate-600 pb-2">Proyecto Lorem</h1>
+
+                <div class="flex flex-row-reverse md:mt-2 lg:mt-0 ">
+                    <span class="z-0 ml-px inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-slate-200 text-xs text-navy-700 ">+2</span><span
+                        class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white">
+                                <img class="h-full w-full rounded-full object-cover"
+                                     src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/avatar1.eeef2af6dfcd3ff23cb8.png"
+                                     alt="">
+                            </span>
+                    <span class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white">
+                                <img class="h-full w-full rounded-full object-cover"
+                                     src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/avatar2.5692c39db4f8c0ea999e.png"
+                                     alt="">
+                            </span>
+                    <span class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white">
+                                <img class="h-full w-full rounded-full object-cover"
+                                     src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/avatar3.9f646ac5920fa40adf00.png"
+                                     alt="">
+                            </span>
+                </div>
+
+            </div>
+            <p class="text-sm tracking-tight font-light text-slate-400 leading-6">Dodge is an American brand of
+                automobiles
+                and a division of Stellantis, based in Auburn Hills, Michigan..</p>
+        </div>
+    </a>
+
+</div>
+
+<!--footer con  solo año y nombre>-->
+
+<footer class="bg-gray-900 fixed inset-x-0 bottom-0 w-screen text-white mt-80">
+    <div class="container mx-auto py-6 px-4">
+        <div class="md:flex md:items-center md:justify-between">
+            <div class="flex-1 mb-6 md:mb-0">
+                <p class="text-white font-bold text-center md:text-left">© 2023 Universidad de Santander</p>
+            </div>
+            <div class="flex-1">
+                <p class="text-center text-white md:text-end">Hecho con ❤️ por Jair Gonzalez</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

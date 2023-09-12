@@ -1,0 +1,12 @@
+
+/*modificar la barra de desplazamiento*/
+::-webkit-scrollbar {
+  width: 7px;
+  background: #9ba0aa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111827;
+}
+
+/*fin modificar la barra de desplazamiento*/

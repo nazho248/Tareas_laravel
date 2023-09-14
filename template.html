@@ -1,113 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Template</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--favicon-->
-  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <!--Tailwind-->
-  <link rel="stylesheet" href="assets/css/tailwind.css">
-  <link rel="stylesheet" href="assets/css/custom.css">
-  <!--Boxicons-->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--favicon-->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!--Tailwind-->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!--DaysyUI-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css"/>
+    <!--Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="max-w-screen min-h-screen bg-gray-100 overflow-x-hidden">
+<body class="max-w-screen min-h-screen bg-gray-100 overflow-x-hidden dark:bg-gray-800">
 <div class="flex flex-wrap ">
-  <section class="relative mx-auto">
-    <!-- navbar -->
-    <nav class="flex justify-between bg-gray-900 text-white w-screen">
-      <div class="px-5 xl:px-12 py-6 flex w-full items-center">
-        <a class="text-3xl font-bold font-heading" href="#">
-          <img class="h-9" src="assets/images/Logo%20Universidad.png" alt="logo">
-        </a>
-        <!-- Nav Links -->
-        <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-          <li><a class="hover:text-gray-200 p-2 px-4 rounded-full bg-blue-800" href="#">Inicio</a></li>
-          <li><a class="hover:text-gray-200" href="Proyectos.html">Proyectos</a></li>
-          <li><a class="hover:text-gray-200" href="#">Estudiantes</a></li>
-          <li><a class="hover:text-gray-200" href="#">Configuración</a></li>
-        </ul>
-        <!-- Header Icons -->
-        <div class="hidden xl:flex items-center space-x-5 items-center">
+    <section class="relative mx-auto">
+        <!-- navbar -->
+        <nav class="flex justify-between bg-gray-900 text-white w-screen">
+            <div class="px-5 xl:px-12 py-6 flex w-full items-center">
+                <a class="text-3xl font-bold font-heading" href="#">
+                    <img class="h-9" src="assets/images/Logo%20Universidad.png" alt="logo">
+                </a>
+                <!-- Nav Links -->
+                <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
+                    <li><a class="hover:text-gray-200 p-2 px-4 rounded-full bg-blue-800" href="dashboard.html">Inicio</a></li>
+                    <li><a class="hover:text-gray-200" href="Proyectos.html">Proyectos</a></li>
+                    <li><a class="hover:text-gray-200" href="Estudiantes.html">Estudiantes</a></li>
+                    <li><a class="hover:text-gray-200" href="#">Configuración</a></li>
+                </ul>
+                <!-- Header Icons -->
+                <div class="hidden xl:flex items-center space-x-5 items-center">
 
-          <a class="flex items-center hover:text-gray-200" href="#">
-            <i class='bx bx-bell text-2xl'></i>
-            <span class="flex absolute -mt-5 ml-4">
+                    <a class="flex items-center hover:text-gray-200" href="#">
+                        <i class='bx bx-bell text-2xl'></i>
+                        <span class="flex absolute -mt-5 ml-4">
               <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
                 </span>
               </span>
-          </a>
-          <!-- Sign In / Register      -->
-          <a class="flex items-center hover:text-gray-200" href="#">
-            <img class="h-9 w-9 rounded-full object-cover" src="assets/images/user.webp"
-                 alt="user">
-          </a>
-        </div>
-      </div>
-      <!-- Responsive navbar -->
-      <a class="xl:hidden flex mr-6 items-center" href="#">
-        <i class='bx bx-bell text-2xl'></i>
-        <!--indicador de notificacion-->
-        <span class="flex absolute -mt-5 ml-4">
+                    </a>
+                    <!-- Sign In / Register      -->
+                    <a class="flex items-center hover:text-gray-200" href="#">
+                        <img class="h-9 w-9 rounded-full object-cover" src="assets/images/user.webp"
+                             alt="user">
+                    </a>
+                </div>
+            </div>
+            <!-- Responsive navbar -->
+            <a class="xl:hidden flex mr-6 items-center" href="#">
+                <i class='bx bx-bell text-2xl'></i>
+                <!--indicador de notificacion-->
+                <span class="flex absolute -mt-5 ml-4">
           <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
           </span>
         </span>
-      </a>
-      <a class="navbar-burger self-center mr-12 xl:hidden" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-200" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </a>
-    </nav>
+            </a>
+            <a class="navbar-burger self-center mr-12 xl:hidden" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-200" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </a>
+        </nav>
 
-  </section>
+    </section>
 </div>
 
-<nav class="flex bg-gray-50 text-gray-700   py-3 px-5  dark:bg-gray-800 rounded-br-xl rounded-bl-xl ">
+<!--BreadCrumb-->
+<nav class="flex bg-gray-50 text-gray-700   py-3 px-5  dark:bg-gray-900/60 rounded-br-xl rounded-bl-xl ">
 
-  <div class="flex w-full">
-    <div class="text-start w-1/2">
-      <h1 class="text-xl font-semibold text-gray-400  my-3">Bienvenido Estudiante</h1>
-    </div>
-
-    <ol class="inline-flex items-center space-x-1 md:space-x-3 text-end w-1/2 justify-end">
-      <li class="inline-flex">
-        <a href="#"
-           class="text-sm text-gray-700 hover:text-gray-900 inline-flex items-center dark:text-gray-400 dark:hover:text-white">
-          <i class='bx bxs-home text-sm'></i>
-           Inicio
-        </a>
-      </li>
-
-      <li aria-current="page">
-        <div class="flex items-center">
-          <i class='bx bx-chevron-right text-2xl text-gray-500'></i>
-          <span class="text-gray-400 ml-1 md:ml-2 text-sm font-medium dark:text-gray-500">Panel de Control</span>
+    <div class="flex w-full">
+        <div class="text-start w-1/2">
+            <h1 class="text-sm md:text-xl font-semibold text-gray-400  my-3">Todos los Proyectos</h1>
         </div>
-      </li>
-    </ol>
-  </div>
+
+        <ol class="inline-flex items-center space-x-1 md:space-x-3 text-end w-1/2 justify-end">
+            <li class="inline-flex">
+                <a href="#"
+                   class="text-sm text-gray-700 hover:text-gray-900 inline-flex items-center dark:text-gray-400 dark:hover:text-white">
+                    <i class='bx bxs-home text-sm'></i>
+                     Proyectos
+                </a>
+            </li>
+
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <i class='bx bx-chevron-right text-2xl text-gray-500'></i>
+                    <span class="text-gray-400 ml-1 md:ml-2 text-sm font-medium dark:text-gray-500">Panel de Control</span>
+                </div>
+            </li>
+        </ol>
+    </div>
 </nav>
+<!--Contenido AQUI-->
+<!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_1.showModal()">Abrir Modal</button>
 
 
-<footer class="bg-gray-900 fixed inset-x-0 bottom-0 w-screen text-white mt-80">
-    <div class="container mx-auto py-6 px-4">
-      <div class="md:flex md:items-center md:justify-between">
-        <div class="flex-1 mb-6 md:mb-0">
-          <p class="text-white font-bold text-center md:text-left">© 2023 Universidad de Santander</p>
+<!--modal-->
+<dialog id="my_modal_1" class="modal">
+    <div class="modal-box">
+        <div class="flex justify-between items-center">
+            <p class="text-2xl font-bold">Información del Estudiante</p>
+            <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">X</button>
+            </form>
         </div>
-        <div class="flex-1">
-          <p class="text-center text-white md:text-end">Hecho con ❤️ por Jair Gonzalez</p>
-        </div>
-      </div>
+        <hr class="my-3 bg-gray-300">
+        <!--contenido modal-->
+
+
+
+
+
+
     </div>
-  </footer>
+</dialog>
 
+<footer class="bg-gray-900 w-screen mt-12">
+    <div class="container mx-auto py-6 px-4">
+        <div class="md:flex md:items-center md:justify-between">
+            <div class="flex-1 mb-6 md:mb-0">
+                <p class="text-white font-bold text-center md:text-left">© 2023 Universidad de Santander</p>
+            </div>
+            <div class="flex-1">
+                <p class="text-center text-white md:text-end">Hecho con ❤️ por Jair Gonzalez</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.tailwindcss.com"></script>
 <!--always on the bottom-->
 
 </body>

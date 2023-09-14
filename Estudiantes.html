@@ -1,10 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Estudiantes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--favicon-->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!--Tailwind-->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!--Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
+<body class="">
+<!--modal-->
+<dialog id="my_modal_1" class="modal">
+    <div class="modal-box">
+        <div class="flex justify-between items-center">
+            <p class="text-2xl font-bold">Información del Estudiante</p>
+            <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn"><i class='bx bx-x text-xl text-white'></i></button>
+            </form>
+        </div>
+        <div class="divider"></div>
+        <!--contenido modal-->
+        <!--imagen a la izquierda, nombres y datos a la derecha junto con acciones-->
+        <div class="flex flex-row gap-5">
+            <div class="w-full md:w-3/4 flex items-center ">
+                <img class="object-cover w-full h-64 rounded-lg" src="https://loremflickr.com/640/360" alt="">
+            </div>
+
+
+            <div class="w-full md:1/4 ml-5">
+                <div class="flex flex-col items-start">
+                    <h2 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+                        arthur melo</h2>
+                    <p class="text-gray-700 capitalize dark:text-gray-100 group-hover:text-gray-300">Estudiante</p>
+                    <!--carrera,semestre,correo,telefono-->
+                    <div class="flex flex-col items-start">
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Carrera:
+                            Ingenieria de Sistemas</p>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Semestre:
+                            8</p>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Correo:
+                            correo@correo.com</p>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Telefono:
+                            123456789</p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="flex ">
+                    <div class="flex gap-5">
+                        <button class="btn btn-warning"> <i class='bx bx-edit-alt text-xl text-white'></i></button>
+                        <button class="btn btn-error"> <i class='bx bx-trash text-xl text-white'></i></button>
+                    </div>
+                    <div class="flex justify-end w-full">
+                        <button class="btn ml-auto" onclick="my_modal_1.close()"> Cerrar </button>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+</dialog>
+
+<!--navnar-->
+<div class="flex flex-wrap ">
+    <section class="relative mx-auto">
+        <!-- navbar -->
+        <nav class="flex justify-between bg-gray-900 text-white w-screen">
+            <div class="px-5 xl:px-12 py-6 flex w-full items-center">
+                <a class="text-3xl font-bold font-heading" href="#">
+                    <img class="h-9" src="assets/images/Logo%20Universidad.png" alt="logo">
+                </a>
+                <!-- Nav Links -->
+                <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
+                    <li><a class="hover:text-gray-200 " href="dashboard.html">Inicio</a></li>
+                    <li><a class="hover:text-gray-200" href="Proyectos.html">Proyectos</a></li>
+                    <li><a class="hover:text-gray-200 p-2 px-4 rounded-full bg-blue-800" href="#">Estudiantes</a></li>
+                    <li><a class="hover:text-gray-200" href="#">Configuración</a></li>
+                </ul>
+                <!-- Header Icons -->
+                <div class="hidden xl:flex items-center space-x-5 items-center">
+
+                    <a class="flex items-center hover:text-gray-200" href="#">
+                        <i class='bx bx-bell text-2xl'></i>
+                        <span class="flex absolute -mt-5 ml-4">
+              <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
+                </span>
+              </span>
+                    </a>
+                    <!-- Sign In / Register      -->
+                    <a class="flex items-center hover:text-gray-200" href="#">
+                        <img class="h-9 w-9 rounded-full object-cover" src="assets/images/user.webp"
+                             alt="user">
+                    </a>
+                </div>
+            </div>
+            <!-- Responsive navbar -->
+            <a class="xl:hidden flex mr-6 items-center" href="#">
+                <i class='bx bx-bell text-2xl'></i>
+                <!--indicador de notificacion-->
+                <span class="flex absolute -mt-5 ml-4">
+          <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
+          </span>
+        </span>
+            </a>
+            <a class="navbar-burger self-center mr-12 xl:hidden" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-200" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </a>
+        </nav>
+
+    </section>
+</div>
+<!--BreadCrumb-->
+<nav class="flex bg-gray-50 text-gray-700   py-3 px-5  dark:bg-gray-800 rounded-br-xl rounded-bl-xl ">
+
+    <div class="flex w-full">
+        <div class="text-start w-1/2">
+            <h1 class="text-xl font-semibold text-gray-400  my-3">Lista de Estudiantes</h1>
+        </div>
+
+        <ol class="inline-flex items-center space-x-1 md:space-x-3 text-end w-1/2 justify-end">
+            <li class="inline-flex">
+                <a href="#"
+                   class="text-sm text-gray-700 hover:text-gray-900 inline-flex items-center dark:text-gray-400 dark:hover:text-white">
+                    <i class='bx bxs-home text-sm'></i>
+                     Estudiantes
+                </a>
+            </li>
+
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <i class='bx bx-chevron-right text-2xl text-gray-500'></i>
+                    <span class="text-gray-400 ml-1 md:ml-2 text-sm font-medium dark:text-gray-500">Panel de Control</span>
+                </div>
+            </li>
+        </ol>
+    </div>
+</nav>
+<!--contenido-->
+
+
+<!-- component -->
+<section class="">
+    <div class="container px-6 py-10 mx-auto">
+        <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Lista de
+            Estudiantes</h1>
+
+        <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error
+            alias, adipisci rem similique, at omnis eligendi optio eos harum.
+        </p>
+
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
+
+            <!--una tarjeta-->
+            <div onclick="my_modal_1.showModal()"
+                 class="flex flex-col  p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-blue-600 rounded-xl shadow hover:shadow-lg dark:bg-gray-700 bg-gray-50">
+                <i class='bx bx-info-circle text-xl text-gray-700 text-end dark:text-gray-300'></i>
+                <div class="flex flex-col items-center">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+                         src="https://loremflickr.com/640/360" alt="">
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+                        arthur melo</h1>
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Estudiante</p>
+                    <div class="flex mt-3 -mx-2">
+                        <a href="http://www.github.com" target="_blank"
+                           class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                           aria-label="Github">
+                            <i class='bx bxl-github text-2xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="my_modal_1.showModal()"
+                 class="flex flex-col  p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-blue-600 rounded-xl shadow hover:shadow-lg dark:bg-gray-700 bg-gray-50">
+                <i class='bx bx-info-circle text-xl text-gray-700 text-end dark:text-gray-300'></i>
+                <div class="flex flex-col items-center">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+                         src="https://loremflickr.com/640/360" alt="">
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+                        arthur melo</h1>
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Estudiante</p>
+                    <div class="flex mt-3 -mx-2">
+                        <a href="http://www.github.com" target="_blank"
+                           class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                           aria-label="Github">
+                            <i class='bx bxl-github text-2xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div onclick="my_modal_1.showModal()"
+                 class="flex flex-col  p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-blue-600 rounded-xl shadow hover:shadow-lg dark:bg-gray-700 bg-gray-50">
+                <i class='bx bx-info-circle text-xl text-gray-700 text-end dark:text-gray-300'></i>
+                <div class="flex flex-col items-center">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+                         src="https://loremflickr.com/640/360" alt="">
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+                        arthur melo</h1>
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Estudiante</p>
+                    <div class="flex mt-3 -mx-2">
+                        <a href="http://www.github.com" target="_blank"
+                           class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                           aria-label="Github">
+                            <i class='bx bxl-github text-2xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div onclick="my_modal_1.showModal()"
+                 class="flex flex-col  p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-blue-600 rounded-xl shadow hover:shadow-lg dark:bg-gray-700 bg-gray-50">
+                <i class='bx bx-info-circle text-xl text-gray-700 text-end dark:text-gray-300'></i>
+                <div class="flex flex-col items-center">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+                         src="https://loremflickr.com/640/360" alt="">
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+                        arthur melo</h1>
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Estudiante</p>
+                    <div class="flex mt-3 -mx-2">
+                        <a href="http://www.github.com" target="_blank"
+                           class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                           aria-label="Github">
+                            <i class='bx bxl-github text-2xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div onclick="my_modal_1.showModal()"
+                 class="flex flex-col  p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-blue-600 rounded-xl shadow hover:shadow-lg dark:bg-gray-700 bg-gray-50">
+                <i class='bx bx-info-circle text-xl text-gray-700 text-end dark:text-gray-300'></i>
+                <div class="flex flex-col items-center">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+                         src="https://loremflickr.com/640/360" alt="">
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+                        arthur melo</h1>
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Estudiante</p>
+                    <div class="flex mt-3 -mx-2">
+                        <a href="http://www.github.com" target="_blank"
+                           class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                           aria-label="Github">
+                            <i class='bx bxl-github text-2xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div onclick="my_modal_1.showModal()"
+                 class="flex flex-col  p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-blue-600 rounded-xl shadow hover:shadow-lg dark:bg-gray-700 bg-gray-50">
+                <i class='bx bx-info-circle text-xl text-gray-700 text-end dark:text-gray-300'></i>
+                <div class="flex flex-col items-center">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+                         src="https://loremflickr.com/640/360" alt="">
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+                        arthur melo</h1>
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Estudiante</p>
+                    <div class="flex mt-3 -mx-2">
+                        <a href="http://www.github.com" target="_blank"
+                           class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                           aria-label="Github">
+                            <i class='bx bxl-github text-2xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div onclick="my_modal_1.showModal()"
+                 class="flex flex-col  p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-blue-600 rounded-xl shadow hover:shadow-lg dark:bg-gray-700 bg-gray-50">
+                <i class='bx bx-info-circle text-xl text-gray-700 text-end dark:text-gray-300'></i>
+                <div class="flex flex-col items-center">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+                         src="https://loremflickr.com/640/360" alt="">
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+                        arthur melo</h1>
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Estudiante</p>
+                    <div class="flex mt-3 -mx-2">
+                        <a href="http://www.github.com" target="_blank"
+                           class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                           aria-label="Github">
+                            <i class='bx bxl-github text-2xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--fin contenedor tarjetas-->
+        </div>
+    </div>
+
+</section>
+
+
+<footer class="bg-gray-900 relative inset-x-0 bottom-0 w-screen text-white mt-10">
+    <div class="container mx-auto py-6 px-4">
+        <div class="md:flex md:items-center md:justify-between">
+            <div class="flex-1 mb-6 md:mb-0">
+                <p class="text-white font-bold text-center md:text-left">© 2023 Universidad de Santander</p>
+            </div>
+            <div class="flex-1">
+                <p class="text-center text-white md:text-end">Hecho con ❤️ por Jair Gonzalez</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--always on the bottom-->
 
 </body>
 </html>

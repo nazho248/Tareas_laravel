@@ -10,3 +10,10 @@
 }
 
 /*fin modificar la barra de desplazamiento*/
+
+/*pa que los modals puedan ser tan grandes como quieran ser xd*/
+.modal-box {
+  min-width: 32rem !important;
+  max-width: 80vw !important;
+  width: auto !important;
+}

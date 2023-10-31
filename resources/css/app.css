@@ -1,0 +1,186 @@
+/* Sidebar styling */
+.sidebar {
+    height: 100vh;
+    border-right: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+}
+
+/* Logo styling */
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Sidebar brand name styling */
+.brand-name {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Right menu styling */
+.nav.flex-column {
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Style active menu item */
+.nav-link.active {
+    background-color: #e9ecef;
+}
+
+/* Responsive cards */
+.card {
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Card icons */
+.card-icon {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Active card styling */
+.active-card {
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card title and description */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: #666;
+}
+
+/* Dashboard content */
+.dashboard-content {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007bff;
+}
+
+.profile-details {
+    flex-grow: 1;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.user-email {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.logout-btn {
+    flex-shrink: 0;
+}
+/* ... (Previous code) ... */
+
+/* Improved SMS section styling */
+.sms-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sms-section h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.sms-section p {
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* ... (Button styling as before) ... */
+
+
+/* ... (Previous code) ... */
+
+/* Improved domain section styling */
+.domains-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.domains-section h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.domains-section table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.domains-section th,
+.domains-section td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ... (Button styling as before) ... */
+
+/* Improved form input and radio styling */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.form-check {
+    margin-bottom: 10px;
+}
+
+/* ... (Button styling as before) ... */

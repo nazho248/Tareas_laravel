@@ -75,7 +75,9 @@ Se crea una nueva instancia desde google cloud platform con las siguientes carac
 - Firewall: Permitir trafico HTTP y HTTPS
 <br>
 Crear el servidor y seguir el procedimiento:
+
 ---
+
 ## Procedimiento para configuración
 Se habilita usuario root en el cliente, colocamos una contraseña para el usuario root
 ```
